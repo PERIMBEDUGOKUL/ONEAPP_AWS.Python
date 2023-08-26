@@ -1,0 +1,35 @@
+PS D:\sample2\softwareone> python manage.py shell_plus
+Unknown command: 'shell_plus'. Did you mean shell?
+Type 'manage.py help' for usage.
+PS D:\sample2\softwareone> python manage.py shell
+Python 3.11.2 (tags/v3.11.2:878ead1, Feb  7 2023, 16:38:35) [MSC v.1934 64 bit (AMD64)]
+Type 'copyright', 'credits' or 'license' for more information
+IPython 8.9.0 -- An enhanced Interactive Python. Type '?' for help.
+
+In [1]: from django.contrib.auth.models import User
+
+In [2]: User.objects.all().values()
+Out[2]: <QuerySet [{'id': 2, 'password': 'pbkdf2_sha256$390000$twFsLlDct2vEqvOq93Z5zi$dMqTgt9i8+OtguqUg3kg6vDnqrhtvfW3HZZV8n3s11U=', 'last_login': datetime.datetime(2023, 8, 19, 2, 47, 5, 401948, tzinfo=datetime.timezone.utc), 'is_superuser': True, 'username': 'Veeru', 'first_name': '', 'last_name': '', 'email': 'yogishaeveeru@gmail.com', 'is_staff': True, 'is_active': True, 'date_joined': datetime.datetime(2022, 11, 18, 14, 15, 29, tzinfo=datetime.timezone.utc)}, {'id': 15, 'password': 'P@ssword123', 'last_login': None, 'is_superuser': False, 'username': 'manjunathacharbr2@gmail.com', 'first_name': 'Prashanth', 'last_name': 'Kumar K H', 'email': 'manjunathacharbr2@gmail.com', 'is_staff': True, 'is_active': True, 'date_joined': datetime.datetime(2022, 11, 29, 4, 51, 32, 581700, tzinfo=datetime.timezone.utc)}, {'id': 16, 'password': 'Veeru@123*', 'last_login': datetime.datetime(2023, 8, 15, 13, 40, 29, 641081, tzinfo=datetime.timezone.utc), 'is_superuser': True, 'username': 'Madhu', 'first_name': 'Madhu', 'last_name': 'Sudhan', 'email': 'yogishaeveeru@gmail.com', 'is_staff': True, 'is_active': True, 'date_joined': datetime.datetime(2023, 8, 15, 13, 31, 18, tzinfo=datetime.timezone.utc)}, {'id': 17, 'password': 'sankar@1234', 'last_login': datetime.datetime(2023, 8, 23, 13, 45, 30, 227973, tzinfo=datetime.timezone.utc), 'is_superuser': False, 'username': 'sankarprasad4043@gmail.com', 'first_name': 'sankar', 'last_name': 'sankar', 'email': 'sankarprasad4043@gmail.com', 'is_staff': True, 'is_active': True, 'date_joined': datetime.datetime(2023, 8, 19, 3, 20, 57, 687200, tzinfo=datetime.timezone.utc)}, {'id': 18, 'password': 'Surya@1234', 'last_login': datetime.datetime(2023, 8, 19, 8, 53, 11, 510770, tzinfo=datetime.timezone.utc), 'is_superuser': False, 'username': 'surya.besanttech@gmail.com', 'first_name': 'surya', 'last_name': 'surya', 'email': 'surya.besanttech@gmail.com', 'is_staff': True, 'is_active': True, 'date_joined': datetime.datetime(2023, 8, 19, 8, 52, 43, 624497, tzinfo=datetime.timezone.utc)}, {'id': 19, 'password': 'Kick@123', 'last_login': datetime.datetime(2023, 8, 19, 9, 20, 12, 958687, tzinfo=datetime.timezone.utc), 'is_superuser': False, 'username': 'brmachar2006@gmail.com', 'first_name': 'manju', 'last_name': 'abc', 'email': 'brmachar2006@gmail.com', 'is_staff': True, 'is_active': True, 'date_joined': datetime.datetime(2023, 8, 19, 9, 19, 48, 273231, tzinfo=datetime.timezone.utc)}, {'id': 20, 'password': 'Gokul@1234', 'last_login': datetime.datetime(2023, 8, 23, 14, 39, 5, 783041, tzinfo=datetime.timezone.utc), 'is_superuser': False, 'username': 'gokul.kote@gmail.com', 'first_name': 'goku', 'last_name': '121', 'email': 'gokul.kote@gmail.com', 'is_staff': True, 'is_active': True, 'date_joined': datetime.datetime(2023, 8, 20, 6, 35, 46, 178188, tzinfo=datetime.timezone.utc)}, {'id': 21, 'password': 'Deepan@1234', 'last_login': datetime.datetime(2023, 8, 20, 8, 1, 43, 102978, tzinfo=datetime.timezone.utc), 'is_superuser': False, 'username': 'deepan.kote@gmail.com', 'first_name': 'Deepan', 'last_name': 'acha', 'email': 'deepan.kote@gmail.com', 'is_staff': True, 'is_active': True, 'date_joined': datetime.datetime(2023, 8, 20, 8, 0, 48, 65341, tzinfo=datetime.timezone.utc)}, {'id': 22, 'password': 'Deepan@1234', 'last_login': datetime.datetime(2023, 8, 20, 8, 3, 28, 442919, tzinfo=datetime.timezone.utc), 'is_superuser': False, 'username': 'deepan.koti@gmail.com', 'first_name': 'deepan', 'last_name': 'goku', 'email': 'deepan.koti@gmail.com', 'is_staff': True, 'is_active': True, 'date_joined': datetime.datetime(2023, 8, 20, 8, 3, 1, 13252, tzinfo=datetime.timezone.utc)}, {'id': 23, 'password': 'Pavi@1234', 'last_login': None, 'is_superuser': False, 'username': 'pavithrashanmugam.444@gmail.com', 'first_name': 'pavi', 'last_name': 'pavi', 'email': 'pavithrashanmugam.444@gmail.com', 'is_staff': True, 'is_active': True, 'date_joined': datetime.datetime(2023, 8, 20, 8, 21, 51, 29066, tzinfo=datetime.timezone.utc)}, {'id': 24, 'password': 'Manju@1234', 'last_login': datetime.datetime(2023, 8, 22, 5, 30, 24, 143668, tzinfo=datetime.timezone.utc), 'is_superuser': False, 'username': 'manjunath.br@softwareone.com', 'first_name': 'manju', 'last_name': 'manju', 'email': 'manjunath.br@softwareone.com', 'is_staff': True, 'is_active': True, 'date_joined': datetime.datetime(2023, 8, 22, 4, 29, 15, 333385, tzinfo=datetime.timezone.utc)}]>
+
+In [3]: User.objects.filter(email="gokul.kote@gmail.com")
+Out[3]: <QuerySet [<User: gokul.kote@gmail.com>]>
+
+In [4]: User.objects.filter(email="gokul.kote@gmail.com").first().update(is_superuser=True)
+---------------------------------------------------------------------------
+AttributeError                            Traceback (most recent call last)
+Cell In[4], line 1
+----> 1 User.objects.filter(email="gokul.kote@gmail.com").first().update(is_superuser=True)
+
+AttributeError: 'User' object has no attribute 'update'
+
+PS D:\sample2\softwareone> python manage.py shell
+
+In [1]: from django.contrib.auth.models import User
+
+In [5]: u=User.objects.filter(email="gokul.kote@gmail.com").first()
+
+In [6]: u.is_superuser=True
+
+In [7]: u.save()
+
+In [8]:
