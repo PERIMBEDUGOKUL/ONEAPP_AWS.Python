@@ -86,15 +86,6 @@
   background-color: gray;
 }
 
-.footer{
-  background-color: #1B1B1B;
-  height: 200px;
-  width: 100%;
-  position: relative;
-  top: 70px;
-}
-
-
 /* side------------------------------------------------------------------ */
 .img1{
   position: relative;
@@ -207,16 +198,10 @@
 /* data*/
 /* Aws------------------------------------------------------------------------------------------ */
 
-.aws-main{
-  position: absolute;
-  left: 70%;
-  top: 30%;
-}
-
 .modal {
-  /* width: fit-content;
-  height: fit-content; */
-    /* max-width: 450px; */
+  /* width: fit-content; */
+  /* height: fit-content; */
+  /* max-width: 450px; */
   background: #dbd9d9;
   box-shadow: 0px 187px 75px rgba(0, 0, 0, 0.01), 0px 105px 63px rgba(0, 0, 0, 0.05), 0px 47px 47px rgba(0, 0, 0, 0.09), 0px 12px 26px rgba(0, 0, 0, 0.1), 0px 0px 0px rgba(0, 0, 0, 0.1);
   border-radius: 26px;
@@ -236,7 +221,7 @@
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
   gap: 10px;
-  color: #8B8E98;
+  color: #363636;
   margin: 0 10px;
 }
 
@@ -278,6 +263,21 @@
   gap: 1px;
 }
 
+.split {
+  width: 100%;
+}
+
+.input_field{
+  width: 100%;
+}
+.input_img{
+  width: 0;
+  position: relative;
+  bottom: 10px;
+  right: 65px;
+}
+
+
 .input_label {
   font-size: 10px;
   font-weight: 600;
@@ -315,4 +315,10 @@
 
 .reg--btn:hover {
   box-shadow: 0px 0px 0px 2px #FFFFFF, 0px 0px 0px 4px #0000003a;
+}
+
+.key-img{
+  position: absolute;
+  top: 140px;
+  left: 65rem;
 }
