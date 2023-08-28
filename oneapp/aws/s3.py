@@ -1,7 +1,8 @@
 # import boto3
 # import re
-# patternm=re.compile(r'^aws')
 
+
+# patternm=re.compile(r'^aws')
 # #print (dir(boto3))
 # #print (dir(boto3.session))
 # accesskeyid=boto3.Session().get_credentials().access_key

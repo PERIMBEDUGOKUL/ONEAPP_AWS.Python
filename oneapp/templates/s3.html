@@ -1,4 +1,5 @@
 {% extends 'profile.html' %}
+{% load static %}
 {% block content %}
 
 <div class="modal">
@@ -10,43 +11,45 @@
         <hr class="line">
       </div>
 
-      <div class="credit-card-info--form">
+      <div class="info--form">
+
+        <div class="input_container">
+          <label for="password_field" class="input_label">Bucket Name</label>
+          <input id="password_field" class="input_field" type="text" name="acc-no" placeholder="Enter New Bucket name..">
+        </div>
+
+        <div class="input_container">
+          <label for="password_field" class="input_label">select</label>
+          <select id="password_field" class="input_field" type="text" name="acc-name" placeholder="select">
+            <option>select1</option>
+            <option>select2</option>
+            <option>select3</option>
+          </select>
+        </div>
 
         {% comment %} <div class="input_container">
-          <label for="password_field" class="input_label">AWS Account No</label>
-          <input id="password_field" class="input_field" type="text" name="input-name" title="Inpit title" placeholder="0000 0000 0000 0000">
-        </div>
-
-        <div class="input_container">
-          <label for="password_field" class="input_label">AWS Account Name</label>
-          <input id="password_field" class="input_field" type="number" name="input-name" title="Inpit title" placeholder="Enter your full name">
-        </div>
-
-
-        <div class="input_container">
           <label for="password_field" class="input_label">AWS Access Key</label>
-          <input id="password_field" class="input_field" type="text" name="input-name" title="Inpit title" placeholder="* Access Key..">
+          <div class="split">
+            <input id="password_field" class="input_field" type="text" name="access-key" placeholder="* Access Key..">
+            <span id="password_field" class="input_img"><img src="{% static 'img/aws-key.png' %}" height="60px" width="70px" alt="logo"></span>         
+          </div>
         </div>
 
         <div class="input_container">
           <label for="password_field" class="input_label">AWS Secret key</label>
-          <input id="password_field" class="input_field" type="number" name="input-name" title="Inpit title" placeholder="* Secret Key..">
-        </div> {% endcomment %}
-
-        
-
-        {% comment %} <div class="input_container">
-          <label for="password_field" class="input_label">Expiry Date / CVV</label>
           <div class="split">
-            <input id="password_field" class="input_field" type="text" name="input-name" title="Expiry Date" placeholder="01/23">
-            <input id="password_field" class="input_field" type="number" name="cvv" title="CVV" placeholder="CVV">
+            <input id="password_field" class="input_field" type="text" name="secret-key" placeholder="* Secret Key..">
+            <span id="password_field" class="input_img"><img src="{% static 'img/aws-key.png' %}" height="60px" width="70px" alt="logo"></span>         
           </div>
         </div> {% endcomment %}
 
       </div>
 
-      {% comment %} <button class="purchase--btn">Register</button> {% endcomment %}
+      <button class="Reg--btn">Summit</button>
 
+      <div class="key-img">
+        <span><img src="{% static 'img/aws-key-main.png' %}" height="300px" width="300px" alt="logo"></span>         
+      </div>
     </form>
   </div>
 
