@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load static %}
 {% block style_n_title %}<title>Login</title>{% endblock %}
 
 {% block content %}
@@ -18,11 +19,6 @@
 	<div class='btnin'>
 		<button class=" btnlog" value="Login" type="submit" >Sign In</button>
 		<a class=" btnup" href="{% url 'registration' %}">Sign Up</a>
-		{% comment %} {% comment %} <input class="btnsub" type="submit" value="Login"> {% endcomment %}
-		{% comment %} <button class="btnreg" onclick="location.href="{% url 'register' %}"" >Sign Up</button> {% endcomment %}
 	</div>
 </form>
-	{% comment %} <div class="registerpage">
-		Create your account here👉 <a href="{% url 'register' %}" class="ml-2">Sign Up</a>
-	</div> {% endcomment %}
-{% endblock %}
+{% endblock content %}

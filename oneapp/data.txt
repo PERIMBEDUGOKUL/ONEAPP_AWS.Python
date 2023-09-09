@@ -33,3 +33,137 @@ In [6]: u.is_superuser=True
 In [7]: u.save()
 
 In [8]:
+
+
+
+{% extends 'profile.html' %}
+{% load static %}
+
+{% block content %}
+<body class="container m-5 p-3">
+
+  <div class="row justify-content-center">
+
+      <div class="col-md-6">
+
+        <div class="mb-1 mb-sm-5 row">
+          <label for="customer">Select a Customer</label>
+            <select id="customer" class="form-select form-select-solid" data-control="select2">
+            </select>
+        </div>
+
+        <div class="mb-1 mb-sm-5 row" id="action_div"></div>
+
+        <div id="dynamic-content">
+            <!-- Dynamic content will be added here based on selected option -->
+        </div>
+
+      </div>
+
+  </div>
+{% endblock content %}
+
+{% block js%}
+<script src="{% static 'assets/plugins/global/plugins.bundle.js' %}"></script>
+<script src="{% static 'assets/js/select2.js' %}"></script>
+<script src="{% static 'js/s3.js' %}"></script>
+{% endblock js%}
+
+
+
+OneAppSelect2({
+    api: "/api/customers",
+    elementSelector: '#customer',
+    placeholder: 'Select a Customer',
+    textField: "username"
+});
+
+let buckts="/customers/1/buckets/"
+let files="/customers/1/buckets/?files=1"
+
+$("#customer").change(function() {
+    $("#dynamic-content").empty()
+    $("#action_div").html("")
+    let selectedOption = $(this).val();
+
+    let action_html = `<label for="module">Select an action:</label>
+                <select class="form-select form-select-solid" data-control="select2" data-placeholder="Select Module"
+                data-allow-clear="true" data-hide-search="true" id="action" name="action">
+                    <option>Select an Action</option>
+                    <option value="create">Create bucket</option>
+                    <option value="download">Download file</option>
+                    <option value="upload">Upload file</option>
+                </select>`
+
+    $("#action_div").html(action_html)
+    $("#action").change(function() {
+        var selectedOption = $(this).val();
+        $("#dynamic-content").empty(); // Clear previous dynamic content
+        
+        if (selectedOption === "create") {
+            $("#dynamic-content").append(`
+
+                <div class="form-group">
+                    <label for="bucketName">Enter bucket name:</label>
+                    <input type="text" id="bucketName" name="bucketName" class="form-control">
+                </div>
+                <button id="createBucketBtn" class="btn btn-primary">Create Bucket</button>
+                
+            `);
+        } else if (selectedOption === "upload") {
+            $("#dynamic-content").append(`
+
+                <div class="form-group">
+                    <label for="selectBucket">Select a bucket:</label>
+                    <select id="selectBucket" name="selectBucket" class="form-control"></select>
+                </div>
+                <div class="form-group">
+                    <label for="file">Select a file:</label>
+                    <input type="file" id="file" name="file" class="form-control-file">
+                </div>
+                <div class="form-group">
+                    <label for="path">Enter path:</label>
+                    <input type="text" id="path" name="path" class="form-control">
+                </div>
+                <button id="uploadBtn" class="btn btn-primary">Upload File</button>
+                
+            `);
+    
+            // Initialize Select2 for bucket select element with pagination
+            OneAppSelect2({
+                api: "/api/customers",
+                elementSelector: '#selectBucket',
+                placeholder: "Select a bucket",
+                textField: "bucket"
+            });
+        } else if (selectedOption === "download") {
+            $("#dynamic-content").append(`
+                <div class="form-group">
+                    <label for="selectBucket">Select a bucket:</label>
+                    <select id="selectBucket" name="selectBucket" class="form-control"></select>
+                </div>
+                <div class="form-group">
+                    <label for="selectFile">Select a file:</label>
+                    <select id="selectFile" name="selectFile" class="form-control"></select>
+                </div>
+                <button id="downloadBtn" class="btn btn-primary">Download File</button>
+            `);
+    
+            // Initialize Select2 for bucket and file select elements with pagination
+
+            OneAppSelect2({
+                api: "/api/customers",
+                elementSelector: '#selectBucket',
+                placeholder: "Select a bucket",
+                textField: "bucket"
+            });
+            OneAppSelect2({
+                api: "/api/customers",
+                elementSelector: "Select a file",
+                placeholder: "Select a bucket",
+                textField: "file"
+            });
+
+        }
+    });
+})

@@ -1,52 +1,44 @@
 {% extends 'profile.html' %}
 {% load static %}
-{% block content %}
 
-<div class="modal">
-    <form class="form">
-      
-      <div class="separator">
-        <hr class="line">
-        <p>AWS ACCOUNT CREATE</p>
-        <hr class="line">
+{% block profile %}
+<div id="aws">
+  <form class="form">
+    <div class="separator">
+      <hr class="line">
+      <p>AWS ACCOUNT CREATE</p>
+      <hr class="line">
+    </div>
+
+    <div class="info--form">
+      <div class="input_container">
+        <label for="password_field" class="input_label">AWS Account No</label>
+        <input id="password_field" class="input_field" type="text" name="acc-no" placeholder="0000 0000 0000 0000">
       </div>
 
-      <div class="info--form">
-
-        <div class="input_container">
-          <label for="password_field" class="input_label">AWS Account No</label>
-          <input id="password_field" class="input_field" type="text" name="acc-no" placeholder="0000 0000 0000 0000">
-        </div>
-
-        <div class="input_container">
-          <label for="password_field" class="input_label">AWS Account Name</label>
-          <input id="password_field" class="input_field" type="text" name="acc-name" placeholder="Enter your full name">
-        </div>
-
-        <div class="input_container">
-          <label for="password_field" class="input_label">AWS Access Key</label>
-          <div class="split">
-            <input id="password_field" class="input_field" type="text" name="access-key" placeholder="* Access Key..">
-            <span id="password_field" class="input_img"><img src="{% static 'img/aws-key.png' %}" height="60px" width="70px" alt="logo"></span>         
-          </div>
-        </div>
-
-        <div class="input_container">
-          <label for="password_field" class="input_label">AWS Secret key</label>
-          <div class="split">
-            <input id="password_field" class="input_field" type="text" name="secret-key" placeholder="* Secret Key..">
-            <span id="password_field" class="input_img"><img src="{% static 'img/aws-key.png' %}" height="60px" width="70px" alt="logo"></span>         
-          </div>
-        </div>
-
+      <div class="input_container">
+        <label for="password_field" class="input_label">AWS Account Name</label>
+        <input id="password_field" class="input_field" type="text" name="acc-name" placeholder="Enter your full name">
       </div>
 
-      <button class="Reg--btn">Register</button>
-
-      <div class="key-img">
-        <span><img src="{% static 'img/aws-key-main.png' %}" height="300px" width="300px" alt="logo"></span>         
+      <div class="input_container">
+        <label for="password_field" class="input_label">AWS Access Key</label>
+        <input id="password_field" class="input_field" type="text" name="access-key" placeholder="* Access Key..">
+        <span class="input_img"><img src="{% static 'img/aws-key.png' %}" height="60px" width="70px" alt="logo"></span>         
       </div>
 
-    </form>
+      <div class="input_container">
+        <label for="password_field" class="input_label">AWS Secret key</label>
+        <input id="password_field" class="input_field" type="text" name="secret-key" placeholder="* Secret Key..">
+        <span class="input_img"><img src="{% static 'img/aws-key.png' %}" height="60px" width="70px" alt="logo"></span>               
+      </div>
+    </div>
+
+    <button class="Reg--btn">Register</button>
+
+    <div class="key-img">
+      <span><img src="{% static 'img/aws-key-main.png' %}" height="300px" width="300px" alt="logo"></span>         
+    </div>
+  </form>
 </div>
-{% endblock content %}
+{% endblock %}
