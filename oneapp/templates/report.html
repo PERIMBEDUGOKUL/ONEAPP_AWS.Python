@@ -1,53 +1,80 @@
 {% extends 'profile.html' %}
 {% load static %}
+
 {% block profile %}
+<div id="s3">
+  <div class="s3-main">
+    <div class="separator">
+      <hr class="line">
+      <p>Report</p>
+      <hr class="line">
+    </div>
 
-<div id="dep">
-    <form class="form">
-
-      <div class="separator">
-        <hr class="line">
-        <p>REPORT</p>
-        <hr class="line">
+    <div class="input_con">
+      <label for="customer" class="label">Select Customer:</label>
+      <select id="customer-select" class="input_field">
+        <option value="select-customer">Select Customer</option>
+        <option value="customer1">Customer 1</option>
+        <option value="customer2">Customer 2</option>
+        <!-- Add more customer options as needed -->
+      </select>
+      
+      <div class="buttons" class="btn-3">
+        <button id="btn1" class="create b">Create Bucket</button>
+        <button id="btn2" class="uplaod b">Upload</button>
+        <button id="btn3" class="download b">Download</button>
       </div>
-
-      <div class="credit-card-info--form">
-
-        {% comment %} <div class="input_container">
-          <label for="password_field" class="input_label">AWS Account No</label>
-          <input id="password_field" class="input_field" type="text" name="input-name" title="Inpit title" placeholder="0000 0000 0000 0000">
-        </div> {% endcomment %}
-
-        {% comment %} <div class="input_container">
-          <label for="password_field" class="input_label">AWS Account Name</label>
-          <input id="password_field" class="input_field" type="number" name="input-name" title="Inpit title" placeholder="Enter your full name">
-        </div>
-
-
-        <div class="input_container">
-          <label for="password_field" class="input_label">AWS Access Key</label>
-          <input id="password_field" class="input_field" type="text" name="input-name" title="Inpit title" placeholder="* Access Key..">
-        </div>
-
-        <div class="input_container">
-          <label for="password_field" class="input_label">AWS Secret key</label>
-          <input id="password_field" class="input_field" type="number" name="input-name" title="Inpit title" placeholder="* Secret Key..">
-        </div> {% endcomment %}
-
-        
-
-        {% comment %} <div class="input_container">
-          <label for="password_field" class="input_label">Expiry Date / CVV</label>
-          <div class="split">
-            <input id="password_field" class="input_field" type="text" name="input-name" title="Expiry Date" placeholder="01/23">
-            <input id="password_field" class="input_field" type="number" name="cvv" title="CVV" placeholder="CVV">
-          </div>
-        </div> {% endcomment %}
-
+    </div>
+    
+    <div class="button-div" id="btn1-div">
+      <!-- Content for Button 1 -->
+      <div class="input_con">
+        <label for="" class="label">Create New Bucket</label>
+        <input class="input_field" type="text" name="Bucket-name" placeholder="Enter New Bucket name..">
+        <button class="s3-btn">Create Bucket</button>
       </div>
-      {% comment %} <button class="purchase--btn">Register</button> {% endcomment %}
+    </div>
 
-    </form>
+    <div class="button-div" id="btn2-div">
+      <!-- Content for Button 2 -->
+      <div class="input_con">
+        <label for="" class="label">Select Element</label>
+        <select class="input_field"  type="text" name="acc-name" placeholder="select">
+          <option>Select Bucket</option>
+          <option>select1</option>
+          <option>select2</option>
+          <option>select3</option>
+        </select>
+        <label for="" class="label">Bucket Name</label>
+        <div class="input_field file">
+          <input type="File" placeholder="Upload">
+        </div>              
+        <label for="" class="label">path</label>
+        <input class="input_field" type="text" placeholder="path">
+        <button class="s3-btn">Upload</button>
+      </div>
+    </div>
+
+    <div class="button-div" id="btn3-div">
+      <!-- Content for Button 3 -->
+      <div class="input_con">
+        <label for="" class="label">select Bucket</label>
+        <select class="input_field" type="text" name="" placeholder="select">
+          <option>select1</option>
+          <option>select2</option>
+          <option>select3</option>
+        </select>
+        <label for="" class="label">select File</label>
+        <select class="input_field" type="text" name="" placeholder="select">
+          <option>select1</option>
+          <option>select2</option>
+          <option>select3</option>
+        </select>
+        <button class="s3-btn">Download</button>
+      </div>
+    </div>
+
   </div>
-
-{% endblock %}
+</div>
+{% endblock  %}
+{% block js %}<script src="{% static 'js/report.js' %}"></script>{% endblock %}

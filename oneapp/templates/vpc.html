@@ -10,64 +10,64 @@
       <hr class="line">
     </div>
 
-    <div class="input_cont">
-      <label for="" class="label">VPC name tag</label>
-      <input class="input_field" type="text" placeholder="my-vpc-01">
+    <div class="vpc_input">
+      <label for="" class="vpc_label">VPC name tag</label>
+      <input class="vpc_data" type="text" placeholder="my-vpc-01">
 
-      <label for="" class="label">Region</label>
-      <select class="input_field"  type="text" name="">
-      <option>US East(N.virginia)us-east-1</option>
-      <option>select1</option>
-      <option>select2</option>
-      <option>select3</option>
-    </select>
+      <label for="" class="vpc_label">Region</label>
+      <select class="vpc_data"  type="text" name="">
+        <option>US East(N.virginia)us-east-1</option>
+        <option>select1</option>
+      </select>
 
-      <label for="" class="label">IPv4 CIDR block</label>
-      <input class="input_field" type="text" placeholder="10.0.0.0/24">
+      <label for="" class="vpc_label">IPv4 CIDR block</label>
+      <input class="vpc_data" type="text" placeholder="10.0.0.0/24">
 
-      <label for="" class="label">Tenancy</label>
-      <select class="input_field"  type="text" name="">
+      <label for="" class="vpc_label">Tenancy</label>
+      <select class="vpc_data"  type="text" name="">
         <option>Default</option>
         <option>Dedicated</option>
       </select>
 
-      <label for="" class="label">Number of Availability Zones (AZs)</label>
-      <div id="" class="Zone">
+      <label for="" class="vpc_label">Number of Availability Zones (AZs)</label>
+      <div id="" class="zone">
         <button id="btn1" class="b">1</button>
         <button id="btn2" class="b">2</button>
         <button id="btn3" class="b">3</button>
       </div>
 
       <div id="select-container">
-        <!-- Select tags will be added here dynamically -->
+        <div class="vpc_input">
+          <!-- Select tags will be added here dynamically -->
+        </div>
       </div>
 
       <div class="subnet">
-        <div class="public input_cont">
+        <div class="public vpc_input">
           <div>
-            <label for="" class="label">Number of public subnets</label>
+            <label for="" class="vpc_label">Number of public subnets</label>
           </div>
           <div id="public-block" class="subnet-btn">
             <button id="public-btn-0" class="b">0</button>
             <button id="public-btn-1" class="b">1</button>
           </div>
-          <div id="public-input-container" class="subnet-input input_cont"></div>
+          <div id="public-input-container" class="subnet-input vpc_input"></div>
         </div>
 
-        <div class="private input_cont">
+        <div class="private vpc_input">
           <div>
-            <label for="" class="label">Number of private subnets</label>
+            <label for="" class="vpc_label">Number of private subnets</label>
           </div>
-          <div id="private-block" class="subnet-btn">
+          <div id="private-block" class="subnet-btn zone">
             <button id="private-btn-0" class="b">0</button>
             <button id="private-btn-1" class="b">1</button>
             <button id="private-btn-2" class="b">2</button>
           </div>
-          <div id="private-input-container" class="subnet-input input_cont"></div>
+          <div id="private-input-container" class="subnet-input vpc_input"></div>
         </div>        
       </div>
-
       <button class="s3-btn">Create VPC</button>
+    </div>
   </div>
 </div>
 {% endblock %}

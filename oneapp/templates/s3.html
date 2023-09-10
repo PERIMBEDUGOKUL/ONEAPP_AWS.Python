@@ -10,73 +10,67 @@
       <hr class="line">
     </div>
 
-    <div class="input_con">
+    <div class="s3_input">
       <label for="customer" class="label">Select Customer:</label>
-      <select id="customer" class="input_field">
-        <option value="select_customer">Select Customer</option>
-        <option value="customer1">GOKUL</option>
+      <select id="customer-select" class="input_field">
+        <option value="select-customer">Select Customer</option>
+        <option value="customer1">Customer 1</option>
         <option value="customer2">Customer 2</option>
-        <option value="customer3">Customer 3</option>
+        <!-- Add more customer options as needed -->
       </select>
       
-      <button id="select-action" class="hidden s3-btn">Select Action</button>
-      <div id="action-buttons" class="hidden btn-3">
-        <button id="button1" class="create b">Create Bucket</button>
-        <button id="button2" class="uplaod b">Upload</button>
-        <button id="button3" class="download b">Download</button>
+      <div class="buttons btn_3">
+        <button id="btn1" class="create b">Create Bucket</button>
+        <button id="btn2" class="uplaod b">Upload</button>
+        <button id="btn3" class="download b">Download</button>
       </div>
     </div>
     
-    <div id="customer1-div" class="hidden">
-      <form id="customer1-form" >
-        <div class="input_con">
-          <label for="" class="label">Create New Bucket</label>
-          <input class="input_field" type="text" name="Bucket-name" placeholder="Enter New Bucket name..">
-          <button class="s3-btn">Create Bucket</button>
-        </div>
-      </form>
+    <div class="button-div" id="btn1-div">
+      <div class="s3_input">
+        <label for="" class="s3_label">Create New Bucket</label>
+        <input class="input_data" type="text" name="" placeholder="Enter New Bucket name..">
+        <button class="s3-btn">Create Bucket</button>
+      </div>
     </div>
 
-    <div id="customer2-div" class="hidden">
-      <form id="customer2-form" >
-        <div class="input_con">
-          <label for="" class="label">Select Element</label>
-          <select class="input_field"  type="text" name="acc-name" placeholder="select">
-            <option>Select Bucket</option>
-            <option>select1</option>
-            <option>select2</option>
-            <option>select3</option>
-          </select>
-          <label for="" class="label">Bucket Name</label>
-          <div class="input_field file">
-            <input type="File" placeholder="Upload">
-          </div>              
-          <label for="" class="label">path</label>
-          <input class="input_field" type="text" placeholder="path">
-          <button class="s3-btn">Upload</button>
-        </div>
-      </form>
+    <div class="button-div" id="btn2-div">
+      <div class="s3_input">
+        <label for="" class="s3_label">Select Element</label>
+        <select class="input_data"  type="text" name="" placeholder="select">
+          <option>Select Bucket</option>
+          <option>select1</option>
+          <option>select2</option>
+          <option>select3</option>
+        </select>
+        <label for="" class="s3_label">Bucket Name</label>
+        <div class="input_data file">
+          <input type="File" placeholder="Upload">
+        </div>              
+        <label for="" class="s3_label">path</label>
+        <input class="input_data" type="text" placeholder="path">
+        <button class="s3-btn">Upload</button>
+      </div>
     </div>
 
-    <div id="customer3-div" class="hidden">
-      <form id="customer3-form" >
-        <div class="input_con">
-          <label for="" class="label">select Bucket</label>
-          <select class="input_field" type="text" name="" placeholder="select">
-            <option>select1</option>
-            <option>select2</option>
-            <option>select3</option>
-          </select>
-          <label for="" class="label">select File</label>
-          <select class="input_field" type="text" name="" placeholder="select">
-            <option>select1</option>
-            <option>select2</option>
-            <option>select3</option>
-          </select>
-          <button class="s3-btn">Download</button>
-        </div>
-      </form>
+    <div class="button-div" id="btn3-div">
+      <div class="s3_input">
+        <label for="" class="s3_label">select Bucket</label>
+        <select class="input_data" type="text" name="" placeholder="select">
+          <option>select1</option>
+          <option>select2</option>
+          <option>select3</option>
+        </select>
+        <label for="" class="s3_label">select File</label>
+        <select class="input_data" type="text" name="" placeholder="select">
+          <option>select1</option>
+          <option>select2</option>
+          <option>select3</option>
+        </select>
+        <button class="s3-btn">Download</button>
+      </div>
     </div>
+
   </div>
 </div>
 {% endblock  %}

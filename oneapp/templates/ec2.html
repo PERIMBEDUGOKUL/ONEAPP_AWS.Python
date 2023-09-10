@@ -3,12 +3,196 @@
 
 {% block profile %}
 <div id="ec">
-  <div class="form">
+  <div class="ec-main">
     <div class="separator">
       <hr class="line">
       <p>EC2</p>
       <hr class="line">
     </div>
+
+    <div class="input_ec">
+      <div class="parent">
+        Name and tags
+        <span class="arrow">&#9660;</span>
+        <div class="content">
+          <div class="input_cont">
+            <label for="" class="label">Region</label>
+            <select class="input_field"  type="text" name="">
+              <option>select1</option>
+              <option>select1</option>
+            </select>
+            <label for="" class="label">Name</label>
+            <input class="input_field" type="text" placeholder="e.g. My Web Server">
+          </div>
+        </div>
+      </div>
+
+      <div class="parent">
+        Application and OS Images (Amazon Machine Image)
+        <span class="arrow">&#9660;</span>
+        <div class="content">
+          <div class="input_cont">
+            {% comment %} img {% endcomment %}
+            <div class="swiffy-slider slider-item-show4 slider-nav-outside slider-nav-dark slider-nav-sm slider-nav-visible slider-nav-page slider-item-snapstart slider-nav-autoplay slider-nav-autopause slider-item-ratio slider-item-ratio-contain slider-item-ratio-32x9 bg-white shadow-lg py-3 py-lg-4" data-slider-nav-autoplay-interval="2000">
+              <div class="slider-container">
+                <div><img src="../assets/img/brandlogos/css-3.svg" alt="..."></div>
+                <div><img src="../assets/img/brandlogos/DWLogoColor_sm.svg" loading="lazy" alt="..."></div>
+                <div><img src="../assets/img/brandlogos/javascript-1.svg" loading="lazy" alt="..."></div>
+                <div><img src="../assets/img/brandlogos/bootstrap-5.svg" loading="lazy" alt="..."></div>
+                <div><img src="../assets/img/brandlogos/eslint-1.svg" loading="lazy" alt="..."></div>
+                <div><img src="../assets/img/brandlogos/github-2.svg" loading="lazy" alt="..."></div>
+                <div><img src="../assets/img/brandlogos/html-1.svg" loading="lazy" alt="..."></div>
+              </div>
+              <button type="button" class="slider-nav" aria-label="Go left"></button>
+              <button type="button" class="slider-nav slider-nav-next" aria-label="Go left"></button>
+            </div>
+            {% comment %}  {% endcomment %}
+            <label for="" class="label">Amazon Machine Image (AMI)</label>
+            <select class="input_field"  type="text" name="">
+              <option>select1</option>
+              <option>select1</option>
+            </select>
+            <label for="" class="label">Architecture</label>
+            <select class="input_field"  type="text" name="">
+              <option>64-bit</option>
+              <option>select1</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      
+
+      <div class="parent">
+        Instance type
+        <span class="arrow">&#9660;</span>
+        <div class="content">
+          <div class="input_cont">
+            <label for="" class="label">Instance type</label>
+            <select class="input_field"  type="text" name="">
+              <option>select1</option>
+              <option>select1</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      
+      <div class="parent">
+        Key pair (login)
+        <span class="arrow">&#9660;</span>
+        <div class="content">
+          <div class="input_cont">
+            <label for="" class="label">Key pair name - required </label>
+            <select class="input_field"  type="text" name="">
+              <option>select1</option>
+              <option>select1</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <div class="parent">
+        Network settings
+        <span class="arrow">&#9660;</span>
+        <div class="content">
+          <div class="input_cont">
+            <label for="" class="label">VPC - required</label>
+            <select class="input_field"  type="text" name="">
+              <option>select1</option>
+              <option>select1</option>
+            </select>
+            <label for="" class="label">Subnet</label>
+            <select class="input_field"  type="text" name="">
+              <option>select1</option>
+              <option>select1</option>
+            </select>
+            <label for="" class="label">Auto-assign public IP</label>
+            <select class="input_field"  type="text" name="">
+              <option>select1</option>
+              <option>select1</option>
+            </select>
+            <label for="" class="label">Firewall (security groups)</label>
+            <span><input type="radio"></input>Create security group</span><span><input type="radio"></input>Select existing security group</span>
+    
+            <label for="" class="label">Security group name - required</label>
+            <input class="input_field" type="text" placeholder="my-vpc-01">
+    
+            <label for="" class="label">Description - required</label>
+            <input class="input_field" type="text" placeholder="my-vpc-01">
+            <div class="Inbound-Rules">
+              <label for="" class="label">Type</label>
+              <select class="input_field"  type="text" name="">
+                <option>select1</option>
+                <option>select1</option>
+              </select>
+              <label for="" class="label">Protocol</label>
+              <input class="input_field" type="text" placeholder="my-vpc-01">
+              <label for="" class="label">Port range</label>
+              <input class="input_field" type="text" placeholder="my-vpc-01">
+              <label for="" class="label">Source type</label>
+              <select class="input_field"  type="text" name="">
+                <option>select1</option>
+                <option>select1</option>
+              </select>
+              <label for="" class="label">Source </label>
+              <select class="input_field"  type="text" name="">
+                <option>select1</option>
+                <option>select1</option>
+              </select>
+              <label for="" class="label">Description - optional</label>
+              <input class="input_field" type="text" placeholder="my-vpc-01">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="parent">
+        Configure storage
+        <span class="arrow">&#9660;</span>
+        <div class="content">
+          <div class="input_cont">
+            <span>1x<input type="number"></input></span>
+            <span>GiB
+              <select class="input_field"  type="text" name="">
+                <option>select1</option>
+                <option>select1</option>
+              </select>
+            </span>            
+          </div>
+        </div>
+      </div>
+
+      {% comment %} <div class="parent">
+        Advanced details
+        <span class="arrow">&#9658;</span>
+        <div class="content">
+          <div class="Instance-type input_cont">
+            <label for="" class="label">Instance type</label>
+            <select class="input_field"  type="text" name="">
+              <option>select1</option>
+              <option>select1</option>
+            </select>
+          </div>
+        </div>
+      </div> {% endcomment %}
+    </div>
   </div>
+
+  <div class="ec-main">
+    <div class="input_cont">
+      <div class="parent">
+        Summary
+        <span class="arrow">&#9660;</span>
+        <div class="content">
+          <div class="input_cont">
+            <label for="" class="label">Name</label>
+            <input class="input_field" type="text" placeholder="e.g. My Web Server">
+            <button class="s3-btn">Deployment</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
 </div>
 {% endblock %}
+{% block js %}<script src="{% static 'js/ec2.js' %}"></script>{% endblock %}
