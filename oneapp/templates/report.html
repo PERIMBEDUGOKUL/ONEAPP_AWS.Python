@@ -10,70 +10,65 @@
       <hr class="line">
     </div>
 
-    <div class="input_con">
-      <label for="customer" class="label">Select Customer:</label>
-      <select id="customer-select" class="input_field">
-        <option value="select-customer">Select Customer</option>
-        <option value="customer1">Customer 1</option>
-        <option value="customer2">Customer 2</option>
-        <!-- Add more customer options as needed -->
-      </select>
-      
-      <div class="buttons" class="btn-3">
-        <button id="btn1" class="create b">Create Bucket</button>
-        <button id="btn2" class="uplaod b">Upload</button>
-        <button id="btn3" class="download b">Download</button>
-      </div>
+  
+  
+  <div class="vpc_input">
+    <label for="" class="vpc_label">VPC name tag</label>
+    <input class="vpc_data" type="text" placeholder="my-vpc-01">
+
+    <label for="" class="vpc_label">Region</label>
+    <select class="vpc_data"  type="text" name="">
+      <option>US East(N.virginia)us-east-1</option>
+      <option>select1</option>
+    </select>
+
+    <label for="" class="vpc_label">IPv4 CIDR block</label>
+    <input class="vpc_data" type="text" placeholder="10.0.0.0/24">
+
+    <label for="" class="vpc_label">Tenancy</label>
+    <select class="vpc_data"  type="text" name="">
+      <option>Default</option>
+      <option>Dedicated</option>
+    </select>
+
+    <label for="" class="vpc_label">Number of Availability Zones (AZs)</label>
+      <div id="zone" class="zone">
+        <button id="zone-btn-1" class="b">1</button>
+        <button id="zone-btn-2" class="b">2</button>
+        <button id="zone-btn-3" class="b">3</button>
     </div>
-    
-    <div class="button-div" id="btn1-div">
-      <!-- Content for Button 1 -->
-      <div class="input_con">
-        <label for="" class="label">Create New Bucket</label>
-        <input class="input_field" type="text" name="Bucket-name" placeholder="Enter New Bucket name..">
-        <button class="s3-btn">Create Bucket</button>
+
+    <div id="select-container">
+      <div class="vpc_input">
+        <!-- Select tags will be added here dynamically -->
       </div>
     </div>
 
-    <div class="button-div" id="btn2-div">
-      <!-- Content for Button 2 -->
-      <div class="input_con">
-        <label for="" class="label">Select Element</label>
-        <select class="input_field"  type="text" name="acc-name" placeholder="select">
-          <option>Select Bucket</option>
-          <option>select1</option>
-          <option>select2</option>
-          <option>select3</option>
-        </select>
-        <label for="" class="label">Bucket Name</label>
-        <div class="input_field file">
-          <input type="File" placeholder="Upload">
-        </div>              
-        <label for="" class="label">path</label>
-        <input class="input_field" type="text" placeholder="path">
-        <button class="s3-btn">Upload</button>
-      </div>
+    <div class="subnet">
+      <div class="public vpc_input">
+        <div>
+          <label for="" class="vpc_label">Number of public subnets</label>
+        </div>
+      <div id="public">
+        <button id="public-btn-0" class="b">0</button>
+        <button id="public-btn-1" class="b">1</button>
     </div>
-
-    <div class="button-div" id="btn3-div">
-      <!-- Content for Button 3 -->
-      <div class="input_con">
-        <label for="" class="label">select Bucket</label>
-        <select class="input_field" type="text" name="" placeholder="select">
-          <option>select1</option>
-          <option>select2</option>
-          <option>select3</option>
-        </select>
-        <label for="" class="label">select File</label>
-        <select class="input_field" type="text" name="" placeholder="select">
-          <option>select1</option>
-          <option>select2</option>
-          <option>select3</option>
-        </select>
-        <button class="s3-btn">Download</button>
+        <div id="public-input-container" class="vpc_input"></div>
       </div>
+      <div class="private vpc_input">
+        <div>
+          <label for="" class="vpc_label">Number of private subnets</label>
+        </div>
+        <div id="private" class="zone">
+          <button id="private-btn-0" class="b">0</button>
+          <button id="private-btn-1" class="b">1</button>
+          <button id="private-btn-2" class="b">2</button>
+      </div>
+        <div id="private-input-container" class="subnet-input vpc_input"></div>
+      </div>        
     </div>
-
+    <button class="s3-btn">Create VPC</button>
+  </div>
   </div>
 </div>
 {% endblock  %}
