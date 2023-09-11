@@ -400,11 +400,6 @@
   background-color: transparent;
 }
 
-.file{
-  display: flex;
-  align-items: center;
-}
-
 .btn_3{
   display: flex;
   justify-content: space-between;
@@ -431,6 +426,11 @@
 
 .b:active{
   color: aqua;
+}
+
+.file{
+  display: flex;
+  align-items: center;
 }
 
 .s3-btn {
@@ -537,26 +537,11 @@
   justify-content: space-between;
 }
 
-.subnet{
-  width: 100%;
-  display: flex;
-}
-
-.subnet-input{
-  display: flex;
-  flex-direction: column;
-}
-
-.public{
-  width: 50%;
-}
-
-.private{
-  width: 50%;
-}
-
-.b{
+.min{
   width: 30%;
+}
+
+.vpc_btn{
   height: 40px;
   background: #F2F2F2;
   border-radius: 11px;
@@ -571,12 +556,24 @@
   cursor: pointer;
 }
 
-.b:hover {
+.vpc_btn:hover {
   box-shadow: 0px 0px 0px 2px #FFFFFF, 0px 0px 0px 4px #0000003a;
 }
-
-button:active{
+.vpc_btn:active{
   color: aqua;
+}
+
+.subnet{
+  width: 100%;
+  display: flex;
+}
+
+.public{
+  width: 50%;
+}
+
+.private{
+  width: 50%;
 }
 
 /*EC2  ------------------------------------------------------------------------ */
@@ -623,40 +620,11 @@ button:active{
   margin: auto;
 }
 
-.input_ec{
+.ec2_input_div{
   width: 100%;
   display: flex;
   flex-direction: column;
   gap: 10px;
-}
-
-.input_cont{
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.label {
-  font-size: 10px;
-  font-weight: 600;
-}
-
-.input_field {
-  width: 100%;
-  height: 40px;
-  padding: 0 0 0 16px;
-  border-radius: 9px;
-  outline: none;
-  border: 1px solid #e5e5e500;
-  transition: all 0.3s cubic-bezier(0.15, 0.83, 0.66, 1);
-  background-color: white;
-}
-
-.input_field:focus {
-  border: 1px solid transparent;
-  box-shadow: 0px 0px 0px 2px #242424;
-  background-color: transparent;
 }
 
 .parent {
@@ -688,9 +656,54 @@ button:active{
   background-color: rgb(220, 218, 218);
 }
 
+.archi{
+  width: 100%;
+  display: flex;
+  gap: 20px;
+}
+
+.ture{
+  width: 40%;
+
+}
+
+.ec2_input{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.ec2_label {
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.input_field {
+  /* width: 100%; */
+  height: 40px;
+  padding: 0 0 0 16px;
+  border-radius: 9px;
+  outline: none;
+  border: 1px solid #e5e5e500;
+  transition: all 0.3s cubic-bezier(0.15, 0.83, 0.66, 1);
+  background-color: white;
+}
+
+.input_field:focus {
+  border: 1px solid transparent;
+  box-shadow: 0px 0px 0px 2px #242424;
+  background-color: transparent;
+}
+
+.firewall{
+  display: flex;
+  justify-content: space-around;
+}
+
+.storage{
+  display: flex;
+  flex-direction: row;
+}
 
 /* report------------------------------------------------------------------------------------------ */
-
-.button-div {
-  display: none;
-}
