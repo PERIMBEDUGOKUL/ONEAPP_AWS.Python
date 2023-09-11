@@ -55,7 +55,12 @@
 
         </div>
     </div>
-    
+    <script>
+        $('.dpy-btn').click(function(){
+            $('.sidebar .aws .dpy-show').toggleClass("show"); 
+            $('.sidebar .aws .first').toggleClass("rotate");
+        });
+    </script>
     {% block js %}<script src="{% static 'js/profile.js' %}"></script>{% endblock %}
     {% block css %}<link rel="stylesheet" href="{% static 'css/profile.css' %}">{% endblock %}
 </body>

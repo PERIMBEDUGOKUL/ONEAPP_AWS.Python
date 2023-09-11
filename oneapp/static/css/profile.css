@@ -706,4 +706,9 @@
   flex-direction: row;
 }
 
+.inbound{
+  display: flex;
+  flex-direction: row;
+}
+
 /* report------------------------------------------------------------------------------------------ */
